@@ -28,9 +28,9 @@ source("main.R")
 📂 **Script:** ```src/01_load_data.R``` <br>
 **Description:**
 
-Loads metabolomics and microbiome datasets (.csv format).
+* Loads metabolomics and microbiome datasets (```.csv``` format).
 
-Stores as raw.metabolome, raw.microbiome.
+* Stores as ```raw.metabolome```, ```raw.microbiome```.
 
 ### 2️⃣ Feature Preprocessing
 📂 **Script:** ```src/02_preprocessing.R``` <br>
