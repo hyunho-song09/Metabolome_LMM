@@ -111,7 +111,7 @@ This pipeline was applied in a clinical study evaluating **12-week probiotic tre
 
 * **Discriminatory features** using sPLS-DA
 
-* **Metabolite-microbiome cross-domain correlation**
+* **Metabolite-microbiome cross-domain association**
 
 ### 📂 Directory Structure
 ```
