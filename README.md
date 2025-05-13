@@ -112,3 +112,24 @@ This pipeline was applied in a clinical study evaluating **12-week probiotic tre
 * **Discriminatory features** using sPLS-DA
 
 * **Metabolite-microbiome cross-domain correlation**
+
+### 📂 Directory Structure
+```
+project/
+├── main.R
+└── src/
+    ├── 01_load_data.R
+    ├── 02_preprocessing.R
+    ├── 03_splsda.R
+    ├── 04_volcano_plot.R
+    ├── 05_lmm_analysis.R
+    ├── 06_lmm_heatmap.R
+    └── 07_correlation_analysis.R
+```
+### Dependencies
+```
+install.packages(c("dplyr", "ggplot2", "boot", "lme4", "ggrepel", 
+                   "reshape2", "psych", "tidyr", "stringr", "RColorBrewer"))
+if (!requireNamespace("mixOmics")) install.packages("mixOmics")
+if (!requireNamespace("ComplexHeatmap")) BiocManager::install("ComplexHeatmap")
+```
