@@ -4,7 +4,7 @@ This repository contains **modular R scripts** and **sample datasets** for analy
 The pipeline focuses on time-dependent and treatment-specific changes using advanced multivariate and longitudinal models.
 
 ---
-
+<br>
 ## Overview
 
 This project aims to investigate:
@@ -14,7 +14,7 @@ This project aims to investigate:
 - The analysis utilizes **Linear Mixed Models (LMM)** to account for repeated measures and inter-individual variability via `patient_ID` as a random effect.
 
 ---
-
+<br>
 ## How to Run
 
 To execute the full analysis pipeline, simply run:
@@ -22,8 +22,9 @@ To execute the full analysis pipeline, simply run:
 ```r
 source("main.R")
 ```
-
+<br>
 ## Pipeline Details
+<br>
 ### 1️⃣ Data Loading
 📂 **Script:** ```src/01_load_data.R``` <br>
 **Description:**
@@ -31,7 +32,7 @@ source("main.R")
 * Loads metabolomics and microbiome datasets (```.csv``` format).
 
 * Stores as ```raw.metabolome```, ```raw.microbiome```.
-
+<br>
 ### 2️⃣ Feature Preprocessing
 📂 **Script:** ```src/02_preprocessing.R``` <br>
 **Description:**
@@ -43,7 +44,7 @@ source("main.R")
 * Filters out all-zero features in microbiome data.
 
 * Generates mapping tables for feature tracking.
-
+<br>
 ### 3️⃣ sPLS-DA (Sparse Partial Least Squares - Discriminant Analysis)
 📂 **Script:** ```src/03_splsda.R``` <br>
 **Description:**
@@ -55,7 +56,7 @@ source("main.R")
 * Plots individual sample distribution by group.
 
 * Outputs feature importance and balanced error rates (BER).
-
+<br>
 ### 4️⃣ Volcano Plot (Linear Model per Feature)
 📂 **Script:** ```src/04_volcano_plot.R``` <br>
 **Description:**
@@ -67,7 +68,7 @@ source("main.R")
 * Visualizes changes with volcano plots by week.
 
 * Highlights significantly up/downregulated features.
-
+<br>
 ### 5️⃣ Linear Mixed Model (LMM)
 📂 **Script:** ```src/05_lmm_analysis.R``` <br>
 **Description:**
@@ -79,7 +80,7 @@ source("main.R")
 * Summarizes significant features across all non-intercept effects.
 
 * Uses ```lme4``` package.
-
+<br>
 ### 6️⃣ Heatmap Visualization of LMM
 📂 **Script:** ```src/06_lmm_heatmap.R``` <br>
 **Description:**
@@ -91,7 +92,7 @@ source("main.R")
 * Visualizes results using dual heatmaps for z-score and coefficient matrix.
 
 * Highlights statistically significant terms with asterisks.
-
+<br>
 ### 7️⃣ Spearman Correlation & Confidence Interval
 📂 **Script:** ```src/07_correlation_analysis.R``` <br>
 **Description:**
@@ -103,7 +104,7 @@ source("main.R")
 * Visualizes metabolite-microbiome relationships.
 
 * Highlights important microbial features with custom shapes/colors.
-
+<br>
 ### Example Use Case
 This pipeline was applied in a clinical study evaluating **12-week probiotic treatment** in patients with **liver disease**, focusing on:
 
@@ -112,8 +113,8 @@ This pipeline was applied in a clinical study evaluating **12-week probiotic tre
 * **Discriminatory features** using sPLS-DA
 
 * **Metabolite-microbiome cross-domain association**
-
-### 📂 Directory Structure
+<br>
+### 📂 Directory Structure <br>
 ```
 project/
 ├── main.R
@@ -126,7 +127,9 @@ project/
     ├── 06_lmm_heatmap.R
     └── 07_correlation_analysis.R
 ```
+<br>
 ### Dependencies
+<br>
 ```
 install.packages(c("dplyr", "ggplot2", "boot", "lme4", "ggrepel", 
                    "reshape2", "psych", "tidyr", "stringr", "RColorBrewer"))
