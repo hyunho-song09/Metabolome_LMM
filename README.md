@@ -36,79 +36,79 @@ source("main.R")
 📂 **Script:** ```src/02_preprocessing.R``` <br>
 **Description:**
 
-Renames features (met.feature1, mb.feature1, etc.).
+* Renames features (```met.feature1```, ```mb.feature1```, etc.).
 
-Z-score scaling applied to each feature.
+* Z-score scaling applied to each feature.
 
-Filters out all-zero features in microbiome data.
+* Filters out all-zero features in microbiome data.
 
-Generates mapping tables for feature tracking.
+* Generates mapping tables for feature tracking.
 
 ### 3️⃣ sPLS-DA (Sparse Partial Least Squares - Discriminant Analysis)
 📂 **Script:** ```src/03_splsda.R``` <br>
 **Description:**
 
-Performs classification analysis on both datasets for week 0 and week 12.
+* Performs classification analysis on both datasets for **week 0** and **week 12**.
 
-Optimizes keepX via repeated M-fold cross-validation.
+* Optimizes ```keepX``` via repeated M-fold cross-validation.
 
-Plots individual sample distribution by group.
+* Plots individual sample distribution by group.
 
-Outputs feature importance and balanced error rates (BER).
+* Outputs feature importance and balanced error rates (BER).
 
 ### 4️⃣ Volcano Plot (Linear Model per Feature)
 📂 **Script:** ```src/04_volcano_plot.R``` <br>
 **Description:**
 
-Performs linear regression: feature ~ Group (Treated vs Untreated).
+* Performs linear regression: ```feature ~ Group``` (Treated vs Untreated).
 
-Calculates coefficients and p-values.
+* Calculates coefficients and p-values.
 
-Visualizes changes with volcano plots by week.
+* Visualizes changes with volcano plots by week.
 
-Highlights significantly up/downregulated features.
+* Highlights significantly up/downregulated features.
 
 ### 5️⃣ Linear Mixed Model (LMM)
 📂 **Script:** ```src/05_lmm_analysis.R``` <br>
 **Description:**
 
-Fits feature ~ treat * week + (1 | patient_ID) for each feature.
+* Fits ```feature ~ treat * week + (1 | patient_ID)``` for each feature.
 
-Extracts effect estimates and p-values.
+* Extracts effect estimates and p-values.
 
-Summarizes significant features across all non-intercept effects.
+* Summarizes significant features across all non-intercept effects.
 
-Uses lme4 package.
+* Uses ```lme4``` package.
 
 ### 6️⃣ Heatmap Visualization of LMM
 📂 **Script:** ```src/06_lmm_heatmap.R``` <br>
 **Description:**
 
-Calculates log-signed p-values.
+* Calculates log-signed p-values.
 
-Aggregates feature-wise z-scores by group.
+* Aggregates feature-wise z-scores by group.
 
-Visualizes results using dual heatmaps for z-score and coefficient matrix.
+* Visualizes results using dual heatmaps for z-score and coefficient matrix.
 
-Highlights statistically significant terms with asterisks.
+* Highlights statistically significant terms with asterisks.
 
 ### 7️⃣ Spearman Correlation & Confidence Interval
 📂 **Script:** ```src/07_correlation_analysis.R``` <br>
 **Description:**
 
-Computes Spearman’s ρ and bootstrapped 95% CI.
+* Computes Spearman’s ρ and bootstrapped 95% CI.
 
-Groups correlation results by significance.
+* Groups correlation results by significance.
 
-Visualizes metabolite-microbiome relationships.
+* Visualizes metabolite-microbiome relationships.
 
-Highlights important microbial features with custom shapes/colors.
+* Highlights important microbial features with custom shapes/colors.
 
 ### Example Use Case
-This pipeline was applied in a clinical study evaluating 12-week probiotic treatment in patients with chronic liver conditions, focusing on:
+This pipeline was applied in a clinical study evaluating **12-week probiotic treatment** in patients with **liver disease**, focusing on:
 
-Time × Treatment interaction effects using LMM
+* **Time × Treatment interaction effects** using LMM
 
-Discriminatory features using sPLS-DA
+* **Discriminatory features** using sPLS-DA
 
-Metabolite-microbiome cross-domain correlation
+* **Metabolite-microbiome cross-domain correlation**
