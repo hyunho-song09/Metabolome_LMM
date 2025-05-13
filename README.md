@@ -24,7 +24,7 @@ source("main.R")
 ```
 
 ## Pipeline Details
-### 1️⃣ Data Loading
+### 1️⃣ Data Loading <br />
 📂 Script: ```src/01_load_data.R```
 Description:
 
