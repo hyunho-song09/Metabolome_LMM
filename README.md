@@ -21,6 +21,7 @@ To execute the full analysis pipeline, simply run:
 
 ```r
 source("main.R")
+```r
 
 ## Pipeline Details
 1️⃣ Data Loading
