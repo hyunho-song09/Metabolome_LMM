@@ -24,8 +24,8 @@ source("main.R")
 ```
 
 ## Pipeline Details
-### 1️⃣ Data Loading <br>
-📂 Script: ```src/01_load_data.R```
+### 1️⃣ Data Loading
+📂 Script: ```src/01_load_data.R``` <br>
 Description:
 
 Loads metabolomics and microbiome datasets (.csv format).
@@ -33,7 +33,7 @@ Loads metabolomics and microbiome datasets (.csv format).
 Stores as raw.metabolome, raw.microbiome.
 
 ### 2️⃣ Feature Preprocessing
-📂 Script: src/02_preprocessing.R
+📂 Script: ```src/02_preprocessing.R``` <br>
 Description:
 
 Renames features (met.feature1, mb.feature1, etc.).
@@ -45,7 +45,7 @@ Filters out all-zero features in microbiome data.
 Generates mapping tables for feature tracking.
 
 ### 3️⃣ sPLS-DA (Sparse Partial Least Squares - Discriminant Analysis)
-📂 Script: src/03_splsda.R
+📂 Script: ```src/03_splsda.R``` <br>
 Description:
 
 Performs classification analysis on both datasets for week 0 and week 12.
@@ -57,7 +57,7 @@ Plots individual sample distribution by group.
 Outputs feature importance and balanced error rates (BER).
 
 ### 4️⃣ Volcano Plot (Linear Model per Feature)
-📂 Script: src/04_volcano_plot.R
+📂 Script: ```src/04_volcano_plot.R``` <br>
 Description:
 
 Performs linear regression: feature ~ Group (Treated vs Untreated).
@@ -69,7 +69,7 @@ Visualizes changes with volcano plots by week.
 Highlights significantly up/downregulated features.
 
 ### 5️⃣ Linear Mixed Model (LMM)
-📂 Script: src/05_lmm_analysis.R
+📂 Script: ```src/05_lmm_analysis.R``` <br>
 Description:
 
 Fits feature ~ treat * week + (1 | patient_ID) for each feature.
@@ -81,7 +81,7 @@ Summarizes significant features across all non-intercept effects.
 Uses lme4 package.
 
 ### 6️⃣ Heatmap Visualization of LMM
-📂 Script: src/06_lmm_heatmap.R
+📂 Script: ```src/06_lmm_heatmap.R``` <br>
 Description:
 
 Calculates log-signed p-values.
@@ -93,7 +93,7 @@ Visualizes results using dual heatmaps for z-score and coefficient matrix.
 Highlights statistically significant terms with asterisks.
 
 ### 7️⃣ Spearman Correlation & Confidence Interval
-📂 Script: src/07_correlation_analysis.R
+📂 Script: ```src/07_correlation_analysis.R``` <br>
 Description:
 
 Computes Spearman’s ρ and bootstrapped 95% CI.
