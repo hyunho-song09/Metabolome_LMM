@@ -24,7 +24,7 @@ source("main.R")
 ```
 
 ## Pipeline Details
-1️⃣ Data Loading
+### 1️⃣ Data Loading
 📂 Script: ```src/01_load_data.R```
 Description:
 
@@ -32,7 +32,7 @@ Loads metabolomics and microbiome datasets (.csv format).
 
 Stores as raw.metabolome, raw.microbiome.
 
-2️⃣ Feature Preprocessing
+### 2️⃣ Feature Preprocessing
 📂 Script: src/02_preprocessing.R
 Description:
 
@@ -44,7 +44,7 @@ Filters out all-zero features in microbiome data.
 
 Generates mapping tables for feature tracking.
 
-3️⃣ sPLS-DA (Sparse Partial Least Squares - Discriminant Analysis)
+### 3️⃣ sPLS-DA (Sparse Partial Least Squares - Discriminant Analysis)
 📂 Script: src/03_splsda.R
 Description:
 
@@ -56,7 +56,7 @@ Plots individual sample distribution by group.
 
 Outputs feature importance and balanced error rates (BER).
 
-4️⃣ Volcano Plot (Linear Model per Feature)
+### 4️⃣ Volcano Plot (Linear Model per Feature)
 📂 Script: src/04_volcano_plot.R
 Description:
 
@@ -68,7 +68,7 @@ Visualizes changes with volcano plots by week.
 
 Highlights significantly up/downregulated features.
 
-5️⃣ Linear Mixed Model (LMM)
+### 5️⃣ Linear Mixed Model (LMM)
 📂 Script: src/05_lmm_analysis.R
 Description:
 
@@ -80,7 +80,7 @@ Summarizes significant features across all non-intercept effects.
 
 Uses lme4 package.
 
-6️⃣ Heatmap Visualization of LMM
+### 6️⃣ Heatmap Visualization of LMM
 📂 Script: src/06_lmm_heatmap.R
 Description:
 
@@ -92,7 +92,7 @@ Visualizes results using dual heatmaps for z-score and coefficient matrix.
 
 Highlights statistically significant terms with asterisks.
 
-7️⃣ Spearman Correlation & Confidence Interval
+### 7️⃣ Spearman Correlation & Confidence Interval
 📂 Script: src/07_correlation_analysis.R
 Description:
 
@@ -104,7 +104,7 @@ Visualizes metabolite-microbiome relationships.
 
 Highlights important microbial features with custom shapes/colors.
 
-🧪 Example Use Case
+### Example Use Case
 This pipeline was applied in a clinical study evaluating 12-week probiotic treatment in patients with chronic liver conditions, focusing on:
 
 Time × Treatment interaction effects using LMM
