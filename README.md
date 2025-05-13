@@ -25,7 +25,7 @@ source("main.R")
 
 ## Pipeline Details
 1️⃣ Data Loading
-📂 Script: src/01_load_data.R
+📂 Script: ```src/01_load_data.R```
 Description:
 
 Loads metabolomics and microbiome datasets (.csv format).
